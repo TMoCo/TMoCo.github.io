@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%- seo -%}
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <style>
+        .container {
+          position: relative;
+          width: 100%;
+          max-height: 100px;
+        }
+
+        .bottomleft {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
+
+        img { 
+            width: 100%;
+            max-height: 100px;
+            opacity: 0.3;
+            object-fit: cover;
+        }
+
+    </style>
+    {%- feed_meta -%}
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
+  </head>
+
+  <body>
+      {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">          
+            <h2 class="post-list-heading">{{ page.title }}</h2>
+            
+            {{ content }}            
+            
+            <ul class="post-list"> 
+                {%- for post in site.categories.portfolio -%}
+                <li>
+                    <div class="container">
+                        <a class="post-link" href="{{ post.url | relative_url }}">
+                            <img src="/assets/Suzanne.png">
+                            <div class="bottomleft">{{ post.title | escape }}</div>
+                        </a>
+                    </div>
+                        <span class="post-meta">{{ post.excerpt }}</span>
+                </li>
+                {%- endfor -%}
+            </ul>
+
+        </div>
+    </main>
+
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
