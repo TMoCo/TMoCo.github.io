@@ -1,7 +1,10 @@
 ---
 layout: post
-title:  "Opengl Raytracer"
+title:  "RayTracer"
+titlePicture: "/assets/InitialRayTracer.png"
 category: portfolio
+permalink: "/Ray_Tracer/"
+
 ---
 
 <!--end-excerpt-->

@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "FakeGL"
+titlePicture: "/assets/Suzanne.png"
 category: portfolio
+permalink: "/FakeGL/"
 ---
 
 <!--end-excerpt-->

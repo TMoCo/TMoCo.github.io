@@ -12,30 +12,43 @@
           position: relative;
           width: 100%;
           max-height: 100px;
+          color: white;
         }
-
+        
+        .container:hover {
+          position: relative;
+          width: 100%;
+          max-height: 100px;
+          opacity: 0.9;
+        }
+        
         .bottomleft {
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-            font-size: 18px;
+          position: absolute;
+          bottom: 8px;
+          left: 16px;
+          font-size: 18px;
+          color: white;
         }
 
         img { 
             width: 100%;
             max-height: 100px;
-            opacity: 0.3;
             object-fit: cover;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 2px;
         }
 
     </style>
+
     {%- feed_meta -%}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
       {%- include google-analytics.html -%}
     {%- endif -%}
+
   </head>
 
   <body>
+
       {%- include header.html -%}
 
     <main class="page-content" aria-label="Content">
@@ -49,7 +62,7 @@
                 <li>
                     <div class="container">
                         <a class="post-link" href="{{ post.url | relative_url }}">
-                            <img src="/assets/Suzanne.png">
+                            <img src= "{{ post.titlePicture }}">
                             <div class="bottomleft">{{ post.title | escape }}</div>
                         </a>
                     </div>

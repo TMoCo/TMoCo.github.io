@@ -5,4 +5,5 @@ layout: home
 title: Hello!
 ---
 
-Thanks for stopping by. My name is Thomas Moreno Cooper and I'm a recent computer science master's graduate with a particular interest in computer graphics and games technologies.
+My name is Thomas Moreno Cooper (Tommy) and welcome to my small corner of the internet.\
+I'm a recent computer science master's graduate with a particular interest in computer graphics, games technologies and high performance 

@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Vulkan Terrain Rendering"
+titlePicture:  "/assets/TerrainRendering.png"
 category: portfolio
+permalink: "/Vulkan_Terrain_Rendering/"
 ---
 
 <!--end-excerpt-->

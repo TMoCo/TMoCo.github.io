@@ -2,6 +2,7 @@
 layout: post
 title:  "2D Smooth Particle Hydrodynamics Fluid Simulation"
 category: portfolio
+permalink: "/SPH_Fluid_Sim/"
 ---
 
 <!--end-excerpt-->

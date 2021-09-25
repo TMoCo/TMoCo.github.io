@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Unity Protein Visualiser"
+titlePicture:  "/assets/Ubiquitin.png"
 category: portfolio
+permalink: "/Unity_Protein_Visualiser/"
 ---
 
 <!--end-excerpt-->
