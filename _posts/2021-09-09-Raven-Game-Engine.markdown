@@ -4,6 +4,7 @@ title:  "Raven Game Engine"
 titlePicture:  "/assets/RavenEngineEditor.png"
 category: portfolio
 permalink: "/Raven_Engine/"
+repo:
 ---
 
 <!--end-excerpt-->
@@ -17,8 +18,6 @@ The Raven engine has many desirable features such as a scene editor, an entity c
 
 Being team leader, I had responsilities beyond simply contributing to the writing of the engine such as managing workloads and deadlines, organising my team's comunications and providing support to my team mates. These tasks were made more difficult with the Covid-19 pandemic.\
 Nevertheless, my team managed to rise to the challenge and succesfully created a functional and complex piece of software of which I am very proud.
-
-[Link to GitLab repository][repo]
 
 [student_showcase]: https://gamerepublic.net/networking-events/student-showcases/
 [repo]: https://gitlab.com/SC17BH/hpg_group_project

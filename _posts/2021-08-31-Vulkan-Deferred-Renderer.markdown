@@ -4,6 +4,7 @@ title:  "Vulkan Deferred Renderer"
 titlePicture:  "/assets/Suzanne.png"
 category: portfolio
 permalink: "/Vulkan_Deferred_Renderer/"
+repo: "VulkanRenderer"
 ---
 
 <!--end-excerpt-->
@@ -27,6 +28,3 @@ I plan on developing this project further by:
 
 The aim is to have a minimal rendering system that can be used in a small game engine for a sci-fi game that plays similar to Star Fox 64 and features high-end graphics.
 
-[Link to repository][repo]
-
-[repo]: https://github.com/TMoCo/VulkanRenderer

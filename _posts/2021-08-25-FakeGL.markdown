@@ -1,13 +1,16 @@
 ---
 layout: post
 title:  "FakeGL"
-titlePicture: "/assets/Suzanne.png"
+titlePicture: "/assets/FakeGL2.gif"
 category: portfolio
 permalink: "/FakeGL/"
+repo: "FakeGL"
 ---
 
 <!--end-excerpt-->
 
-[Link to repository][repo]
+This university coursework was designed to give an understanding of the OpenGL render pipeline, and what better way than by reimplementing it from scratch on the CPU?\
+![FakeGl1]({{site.url}}/assets/FakeGL1.gif)
+![FakeGL2]({{site.url}}/assets/FakeGL2.gif)
 
-[repo]: https://github.com/TMoCo/FakeGL
+
