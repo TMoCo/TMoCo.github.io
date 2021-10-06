@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "RayTracer"
-titlePicture: "/assets/InitialRayTracer.png"
+titlePicture: "/assets/InitialRaytaracer.png"
 category: portfolio
 permalink: "/Ray_Tracer/"
 
