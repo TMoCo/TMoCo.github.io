@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "RayTracer"
-titlePicture: "/assets/InitialRaytaracer.png"
+titlePicture: "/assets/InitialRayTracer.png"
 category: portfolio
-permalink: "/Ray_Tracer/"
-
+permalink: "/RayTracer/"
+repo: "Simple-RayTracer"
 ---
 
 <!--end-excerpt-->
 
-[Link to repository][repo]
 
+
+[Link to repository][repo]
 
 [repo]: https://github.com/TMoCo/Simple-RayTracer
