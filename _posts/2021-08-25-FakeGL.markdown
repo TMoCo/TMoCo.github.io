@@ -9,8 +9,17 @@ repo: "FakeGL"
 
 <!--end-excerpt-->
 
-This university coursework was designed to give an understanding of the OpenGL render pipeline, and what better way than by reimplementing it from scratch on the CPU?\
+The aim of this project was to gain an understanding of the OpenGL render pipeline, and what better way than by reimplementing it from scratch on the CPU?
+
 ![FakeGl1]({{site.url}}/assets/FakeGL1.gif)
+<p style="text-align:center; margin-top:-13px">
+<em>FakeGL rasterising lines, triangles, interpolating uvs and depth testing</em>
+</p>
 ![FakeGL2]({{site.url}}/assets/FakeGL2.gif)
+<p style="text-align:center; margin-top:-13px">
+<em>FakeGL geometry shading and texturing</em>
+</p>
+On the left is the OpenGL on the GPU, on the right is the FakeGL output on the CPU; uncanny right? To get these results I had to implement rasteriser functions for the point, line and triangle primitives with depth testing, functions for transforming vertex data, textures and lighting using various geometry shading methods (flat, gouraud and blinn-phong). 
+
 
 
