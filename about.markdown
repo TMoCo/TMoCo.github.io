@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-My name is Thomas Moreno Cooper, and I'm a 22 year-old graduate from the University of Leeds. I completed my Meng in [Computer Science with High Performance Graphics and Games Engineering][HPG] in the summer of 2021, graduating with honours.
+My name is Thomas Moreno Cooper, and I'm a 22 year-old graduate from the University of Leeds. I completed my Meng in [Computer Science with High Performance Graphics and Games Engineering][HPG] in the summer of 2021, graduating with first class honours.
 
 I grew up in France, completing an [OIB Baccalaureat][OIB] and majoring in mathematics. Prior to my further studies in Leeds, I had never done any programming and very nearly went to Paris to study History. The main reasons behind choosing to study computer science in Leeds were my strength in Mathematics and my love for computer games.\
 I was originally unsure if I had made the right career choice and very unhappy during my first few years. I know now with hindsight that I made the right decision.
