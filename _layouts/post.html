@@ -43,7 +43,7 @@
           <div class="post-content e-content" itemprop="articleBody">
             {{ content }}
 	    {%- if page.category == "portfolio" -%}
-	    <a href="https://github.com/{{ site.github_username }}/{{ page.repo }}"><svg class="svg-icon"><use xlink:href="{{ 'assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span>Source</span><a/>
+	    <a href="https://github.com/{{ site.github_username }}/{{ page.repo }}"><svg class="svg-icon"><use href="{{ 'assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span>Source</span><a/>
 	    {%- endif -%}
           </div>
         
