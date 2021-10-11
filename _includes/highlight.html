@@ -1,0 +1,8 @@
+<div class="highlight">
+  {% highlight include.ext %}{{ include.code }}{% endhighlight %}
+  {%- if include.caption -%}
+    <p style="margin-bottom:15px; margin-top: -20px;">
+      <em> {{ include.caption }} </em>
+    </p>
+  {%- endif -%}
+</div>

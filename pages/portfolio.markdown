@@ -2,6 +2,7 @@
 layout: portfolio
 title: Portfolio
 permalink: /portfolio/
+style: "portfolio.css"
 ---
 
 Below is a selection of some of my projects over the years, some of which I am still contributing to. Source code for all these  and other projects can be found on my [GitHub][my_github]. Enjoy!

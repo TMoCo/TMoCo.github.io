@@ -1,19 +1,16 @@
 ---
-layout: post
+layout: portfolio_entry
 title:  "RayTracer"
 titlePicture: "/assets/InitialRayTracer.png"
-category: portfolio
 permalink: "/RayTracer/"
 repo: "Simple-RayTracer"
+order: 6
 ---
-
-<!--end-excerpt-->
-
-![rtGUI]({{site.url}}/assets/RayTracerGUI.png)
-*Gray cornell box render (100 samples per pixel)*
+<!-- main content -->
+{% include captioned_image.html src='assets/RayTracerGUI.png' alt='raytracer gui' caption='Gray cornell box render (100 samples per pixel)' %}
 
 This application was originally a piece of coursework for my 4th year rendering module. I revisited it over the summer with the intention of improving it. The original application was quite slow and produced inacurrate results.\
-I started by refactoring the maths classes used in the application to be much faster, specifically vectors, quaternions and matrices. I recently started reading about SIMD and applied them to my classes using the intrinsics in __xmmintrin.h__. I compared it to my previous code, which I had optimised as much as possible (using bit-wise operations, loop unravelling...), and got a 200% speedup for the same operations (matrix multiplication, vector addition).\
+I started by refactoring the maths classes used in the application to be much faster, specifically vectors, quaternions and matrices. I recently started reading about SIMD and applied them to my classes using the intrinsics in {% include inline.yml code='<xmmintrin.h>' ext='cpp' %}. I compared it to my previous code, which I had optimised as much as possible (using bit-wise operations, loop unravelling...), and got a 200% speedup for the same operations (matrix multiplication, vector addition).\
 I wrote my own WaveFrontOBJ file parser, using the .obj files exported by Blender as templates, so that I may easily create my own custom 3D models and be able to render them later.\
 \
 I built my RayTracer class to be more flexible than my coursework submission to quickly switch between different methods for ray-triangle intersections, hemisphere sampling and triangle sampling.

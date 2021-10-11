@@ -1,86 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+---
+layout: default
+---
+          
+<h2 class="post-list-heading">{{ page.title }}</h2>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {%- seo -%}
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <style>
-        .container {
-          position: relative;
-          width: 100%;
-          max-height: 100px;
-          color: white;
-	  
-        }
-        
-        .container:hover {
-          position: relative;
-          width: 100%;
-          max-height: 100px;
-          opacity: 0.9;
-        }
-        
-        .bottomleft {
-          position: absolute;
-          bottom: 8px;
-          left: 16px;
-          font-size: 18px;
-          color: white;
-	  text-shadow: 0px 0px 6px black;
-        }
+{{ content }}            
 
-        img { 
-            width: 100%;
-            max-height: 100px;
-            object-fit: cover;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 2px;
-        }
+<ul class="post-list"> 
+  {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
+  {%- for entry in entries -%} 
+    <li>
+      <div class="container">
+        <a class="post-link" href="{{ entry.url | relative_url }}">
+          <img src= "{{ entry.titlePicture }}">
+          <div class="bottomleft">{{ entry.title | escape }}</div>
+        </a>
+      </div>
+      <span class="post-meta">{{ post.excerpt }}</span>
+    </li>
+  {%- endfor -%}
+</ul>
 
-    </style>
-
-    {%- feed_meta -%}
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
-  
-  <script type="text/javascript" src="{{site.url}}/javascript/socialListCheck.js"></script>
-
-  </head>
-
-  <body>
-
-      {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">          
-            <h2 class="post-list-heading">{{ page.title }}</h2>
-            
-            {{ content }}            
-            
-            <ul class="post-list"> 
-                {%- for post in site.categories.portfolio -%}
-                <li>
-                    <div class="container">
-                        <a class="post-link" href="{{ post.url | relative_url }}">
-                            <img src= "{{ post.titlePicture }}">
-                            <div class="bottomleft">{{ post.title | escape }}</div>
-                        </a>
-                    </div>
-                        <span class="post-meta">{{ post.excerpt }}</span>
-                </li>
-                {%- endfor -%}
-            </ul>
-
-        </div>
-    </main>
-
-
-    {%- include footer.html -%}
-
-  </body>
-
-</html>
