@@ -13,4 +13,4 @@ As my studies advanced, so did my interest in the subject I was studying (I ende
 
 [OIB]: https://www.education.gouv.fr/l-option-internationale-du-baccalaureat-oib-5960
 [HPG]: https://courses.leeds.ac.uk/i069/computer-science-with-high-performance-graphics-and-games-engineering-meng-bsc
-[cvlink]: {{site.url}}/documents/CV_v6_0_1.pdf
+[cvlink]: {{site.url}}/documents/CV_v6_1_0.pdf
