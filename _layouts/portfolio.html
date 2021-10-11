@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<script>
-  if(window.getComputedStyle(getElementById("list")).style.height == 0) {
-   // show backup list if list isnt visible
-   document.getElementById("backup list").style.height = "auto";
-  }
-</script>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   <head>
@@ -54,7 +48,7 @@
     {%- endif -%}
   
   <script type="text/javascript" src="{{site.url}}/javascript/socialListCheck.js"></script>
-  
+
   </head>
 
   <body>
