@@ -13,8 +13,8 @@
          <li><a href="mailto:{{ site.email }}"><span>{{ site.email }}</span></a></li>
        </ul>
        <div id="backup list" style="height:0px;">
+        <p>Connect:</p>
         <ul>
-          <li>Connect:</li>
           <li><a href="https://github.com/{{ site.github_username }}"><span>GitHub</span></a></li>
           <li><a href="https://www.linkedin.com/in/thomas-moreno-cooper-768381150/"><span>Linkedin</span></a></li>
           <li><a href="mailto:{{ site.email }}"><span>{{ site.email }}</span></a></li>
@@ -32,7 +32,7 @@
    </div>
 
    <script>
-     if(document.getElementById("list").offsetHeight == 0) {
+     if(window.getComputedStyle(getElementById("list")).style.height == 0) {
       // show backup list if list isnt visible
       document.getElementById("backup list").style.height = "auto";
      }
