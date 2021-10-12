@@ -7,7 +7,7 @@ repo: "ProteinVisualiser"
 order: 2
 ---
 <!-- main content -->
-{% include captioned_image.html src='/assets/Ubiquitin.png' alt='Ubiquitin' caption='Ubiquitin protein' %}
+{% include captioned_image.html src='assets/Ubiquitin.png' alt='Ubiquitin' caption='Ubiquitin protein' %}
 
 The aim of this project was to explore the use of game technologies to aid in a field of research, in this case the study of molecules in biochemsitry.\
 Made in Unity, this application provides some of the core functionalities expected from standard molecular visualisers such as VMD:
