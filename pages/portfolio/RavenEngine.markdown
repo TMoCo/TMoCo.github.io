@@ -17,4 +17,4 @@ The Raven engine has many desirable features such as a scene editor, an entity c
 Being team leader, I had responsilities beyond simply contributing to the writing of the engine such as managing workloads and deadlines, organising my team's comunications and providing support to my team mates; all of which was impacted by the Covid-19 pandemic.\
 Nevertheless, my team managed to rise to the challenge and succesfully created a functional and complex piece of software of which I am very proud.
 
-[student_showcase]: https://gamerepublic.net/networking-events/student-showcases/
+[student_showcase]: https://eps.leeds.ac.uk/computing/news/article/5726/leeds-students-receive-red-kite-game-award-at-the-2021-game-republic-student-showcase
