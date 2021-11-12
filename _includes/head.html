@@ -5,8 +5,8 @@
 
   {%- seo -%}
 
-  <!-- minima stylesheet  -->
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <!-- minima stylesheet -->
+  <link rel="stylesheet" href="{{ "/style/main.css" | relative_url }}">
 
   {%- feed_meta -%}
 
@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="{{site.url}}/style/{{page.style}}">
   {%- endif -%}
 
+  <!-- react -->
+  <script asyinc src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script asyinc src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script async type="text/javascript" src="/javascript/navBar.js"></script>
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/assets/favicon/favicon-32x32.png">

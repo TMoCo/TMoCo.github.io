@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+  background-color: #0f1928;
+  color: #3c96be;
+}
+
+a {
+  color: #3cbdf0;
+}
+
+.wrapper {
+  display: grid;
+  width: 100%;
+}
+
+.site-header {
+  width: auto ;
+  padding: 3% 2.5% 1.5%;
+  background-color: #141e32;
+}
+
+.site-title {
+  width: auto;
+  text-decoration: none;
+  text-align: left;
+  font-size: 25px;
+  color: inherit;
+}
+
+.site-nav {
+  width: auto;
+  text-align: right;
+  grid-area: 1 / 2 / 1 / 2;
+}
+
+.nav-bar {
+  
+}
