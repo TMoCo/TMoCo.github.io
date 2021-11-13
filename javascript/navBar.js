@@ -6,34 +6,60 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function NavLink(props) {
+  return React.createElement(
+    'a',
+    {
+      className: 'nav-link',
+      href: props.link.url },
+    props.link.label
+  );
+}
+
 var NavBar = function (_React$Component) {
   _inherits(NavBar, _React$Component);
 
   function NavBar(props) {
     _classCallCheck(this, NavBar);
 
-    var _this = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
-
-    _this.state = {
-      urls: props
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
   }
 
   _createClass(NavBar, [{
-    key: "render",
+    key: 'render',
     value: function render() {
-      return React.createElement(
-        "div",
-        { className: "nav-bar" },
-        " "
-      );
+      return this.props.links.map(function (link) {
+        return React.createElement(NavLink, {
+          key: link.label,
+          link: link
+        });
+      });
     }
   }]);
 
   return NavBar;
 }(React.Component);
 
+// from an array of urls, create link objects
+
+
+function getLinks(urls, root) {
+  var links = [];
+  for (var i = 0; i < urls.length; ++i) {
+    links.push({
+      url: root + urls[i],
+      label: urls[i].replace(/\//g, '') // add g modifier to not stop after first match
+    });
+  }
+  return links;
+}
+
 // ========================================
 
-ReactDOM.render(React.createElement(NavBar, null), document.getElementById('site-nav'));
+var nav = document.getElementById('site-nav');
+var urls = nav.getAttribute('urls').split(' ').filter(function (x) {
+  return x;
+});
+var root = nav.getAttribute('root');
+
+ReactDOM.render(React.createElement(NavBar, { links: getLinks(urls, root) }), nav);

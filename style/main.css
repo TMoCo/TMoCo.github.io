@@ -2,6 +2,7 @@ body {
   margin: 0px;
   background-color: #0f1928;
   color: #3c96be;
+  font-family: 'Courier New', monospace;
 }
 
 a {
@@ -10,12 +11,13 @@ a {
 
 .wrapper {
   display: grid;
+  align-items: center;
   width: 100%;
 }
 
 .site-header {
   width: auto ;
-  padding: 3% 2.5% 1.5%;
+  padding: 2% 2.5% 1.5%;
   background-color: #141e32;
 }
 
@@ -23,16 +25,33 @@ a {
   width: auto;
   text-decoration: none;
   text-align: left;
-  font-size: 25px;
+  font-size: 200%;
   color: inherit;
 }
 
 .site-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: auto;
-  text-align: right;
+  height: 20%;
   grid-area: 1 / 2 / 1 / 2;
 }
 
-.nav-bar {
-  
+.nav-link {
+  padding: 4% 3% 4%;
+  margin: 0px 10px 0px;
+
+  font-size: 150%;
+  text-align: center;
+  text-decoration: none;
+
+  border: 1px solid #3c96be;
+
+  transition: transform .1s;
+}
+
+.nav-link:hover, .nav-link:focus{
+  background-color: #14283c;
+  transform: scale(1.1);
 }

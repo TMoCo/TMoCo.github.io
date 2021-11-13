@@ -11,13 +11,12 @@
     </a>
 
     {%- if page_paths -%}
-      <nav id="site-nav" class="site-nav">
-        {% assign pages = '' %}
-        {% for page in site.nav_pages %}
-        {%- assign my_page = site.pages | where: "path", page | first -%}
-        {%- assign pages = pages | append: my_page.url | append: " " | default: '' -%}
-        {% endfor %}
-        {{ pages | split: " " | jsonify }}
+    {% assign pages = '' %}
+    {% for page in site.nav_pages %}
+    {%- assign my_page = site.pages | where: "path", page | first -%}
+    {%- assign pages = pages | append: my_page.url | append: " " | default: '' -%}
+    {% endfor %}
+      <nav id="site-nav" class="site-nav" urls="{{ pages }}" root="{{ site.url }}">
       </nav>
     {%- endif -%}
   </div>
