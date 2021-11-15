@@ -22,10 +22,21 @@
     <link rel="stylesheet" href="{{site.url}}/style/{{page.style}}">
   {%- endif -%}
 
+  <!-- JSON data for site navigation -->
+  {%- capture nav_links -%}
+    [{%- for page in site.nav_pages -%}
+      {%- assign my_page = site.pages | where: "path", page | first -%}
+      {"url":"{{- my_page.url | absolute_url -}}","label":"{{- my_page.title -}}"}
+      {%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}]
+  {%- endcapture -%}
+
   <!-- react -->
   <script asyinc src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script asyinc src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script async type="text/javascript" src="/javascript/navBar.js"></script>
+  <script async type="module" src="/javascript/navBar.js"></script>
+  <script async type="text/javascript" src="/javascript/footer.js"></script>
+
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/assets/favicon/favicon-32x32.png">

@@ -33,9 +33,19 @@ nav_pages:
 author_firstname: Thomas
 author_surname: Moreno Cooper
 
+# contact info
+social_links:
+  - label: GitHub
+    url: https://github.com/TMoCo
+    icon: /assets/minima-social-icons.svg#github
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/thomas-moreno-cooper-768381150/
+    icon: /assets/minima-social-icons.svg#linkedin
+
 # usernames
 github_username: TMoCo
 linkedin_username: thomas-moreno-cooper-768381150
+email: mailto:thomas.moreno.cooper@gmail.com
 
 # post writing
 excerpt_separator: <!--end-excerpt-->

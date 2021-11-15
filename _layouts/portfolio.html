@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-          
-<h2 class="post-list-heading">{{ page.title }}</h2>
-
-{{ content }}            
-
-<ul class="post-list"> 
-  {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
-  {%- for entry in entries -%} 
+<section>
+  <div class="single-column">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {{ content }}
+  </div>
+  <ul class="post-list">
+    {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
+    {%- for entry in entries -%}
     <li>
       <div class="container">
         <a class="post-link" href="{{ entry.url | relative_url }}">
@@ -18,6 +18,6 @@ layout: default
       </div>
       <span class="post-meta">{{ post.excerpt }}</span>
     </li>
-  {%- endfor -%}
-</ul>
-
+    {%- endfor -%}
+  </ul>
+</section>

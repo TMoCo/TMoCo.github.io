@@ -1,23 +1,13 @@
 <header class="site-header" role="banner">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.nav_pages | default: default_paths -%}
-
-
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      {{ site.author_firstname }}
-      {{ site.author_surname }}
-    </a>
-
-    {%- if page_paths -%}
-    {% assign pages = '' %}
-    {% for page in site.nav_pages %}
-    {%- assign my_page = site.pages | where: "path", page | first -%}
-    {%- assign pages = pages | append: my_page.url | append: " " | default: '' -%}
-    {% endfor %}
-      <nav id="site-nav" class="site-nav" urls="{{ pages }}" root="{{ site.url }}">
-      </nav>
-    {%- endif -%}
+  <div class="grid-wrapper">
+    <div class="site-title">
+      <a rel="author" href="{{ "/" | relative_url }}">
+        <span>
+          {{ site.author_firstname }}
+          {{ site.author_surname }}
+        </span>
+      </a>
+    </div>
+    <nav id="site-nav" class="site-nav" nav-links={{nav_links}} role="navigation"</nav>
   </div>
 </header>

@@ -1,65 +1,89 @@
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function NavLink(props) {
+function NavBarLink(props) {
   return React.createElement(
-    'a',
-    {
-      className: 'nav-link',
-      href: props.link.url },
-    props.link.label
+    "div",
+    { className: "nav-link site-nav-button" },
+    React.createElement(
+      "a",
+      { href: props.link.url },
+      React.createElement(
+        "span",
+        null,
+        props.link.label
+      )
+    )
   );
 }
 
-var NavBar = function (_React$Component) {
-  _inherits(NavBar, _React$Component);
+function NavBarMenu(props) {
+  return React.createElement(
+    "div",
+    { className: "site-nav-menu site-nav-button" },
+    React.createElement(
+      "a",
+      { href: props.link.url },
+      React.createElement(
+        "span",
+        null,
+        props.link.label
+      )
+    )
+  );
+}
 
-  function NavBar(props) {
-    _classCallCheck(this, NavBar);
+function NavBar(props) {
+  var _useWindowDimension = useWindowDimension(),
+      _useWindowDimension2 = _slicedToArray(_useWindowDimension, 2),
+      width = _useWindowDimension2[0],
+      height = _useWindowDimension2[1];
 
-    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
-  }
+  console.log(width, height);
+  // based on width, change what is rendered
+  return width > 1000 ? props.links.map(function (link) {
+    return React.createElement(NavBarLink, { key: link.label, link: link });
+  }) : React.createElement(NavBarMenu, { key: "nav-menu", link: { "url": '/', "label": 'menu' } });
+}
 
-  _createClass(NavBar, [{
-    key: 'render',
-    value: function render() {
-      return this.props.links.map(function (link) {
-        return React.createElement(NavLink, {
-          key: link.label,
-          link: link
-        });
-      });
+// hook for getting window dimensions
+function useWindowDimension() {
+  var _React$useState = React.useState([window.innerWidth, window.innerHeight]),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      dimension = _React$useState2[0],
+      setDimension = _React$useState2[1];
+
+  React.useEffect(function () {
+    var debouncedResize = debounce(function () {
+      console.log("resized");
+      setDimension([window.innerWidth, window.innerHeight]);
+    }, 100);
+    window.addEventListener('resize', debouncedResize);
+    return function () {
+      return window.removeEventListener('resize', debouncedResize);
+    };
+  }, []); // empty array = only on mount
+  return dimension;
+}
+
+function debounce(func) {
+  var _this = this;
+
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+
+  var timer = void 0;
+  return function () {
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
-  }]);
 
-  return NavBar;
-}(React.Component);
-
-// from an array of urls, create link objects
-
-
-function getLinks(urls, root) {
-  var links = [];
-  for (var i = 0; i < urls.length; ++i) {
-    links.push({
-      url: root + urls[i],
-      label: urls[i].replace(/\//g, '') // add g modifier to not stop after first match
-    });
-  }
-  return links;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      return func.apply(_this, args);
+    }, timeout);
+  };
 }
 
 // ========================================
 
 var nav = document.getElementById('site-nav');
-var urls = nav.getAttribute('urls').split(' ').filter(function (x) {
-  return x;
-});
-var root = nav.getAttribute('root');
-
-ReactDOM.render(React.createElement(NavBar, { links: getLinks(urls, root) }), nav);
+ReactDOM.render(React.createElement(NavBar, { links: JSON.parse(nav.getAttribute('nav-links')) }), nav);

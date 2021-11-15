@@ -1,26 +1,20 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  
-  <div class="wrapper">
-  
-  <div class="footer-col-wrapper">
-    <div class="footer-col footer-col-1">
-      <p>Connect:</p>
-        <ul id="list" class="social-media-list">
-         <li><a href="https://github.com/{{ site.github_username }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span>GitHub</span></a></li>
-         <li><a href="https://www.linkedin.com/in/thomas-moreno-cooper-768381150/"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg><span>Linkedin</span></a></li>
-         <li><a href="mailto:{{ site.email }}"><span>{{ site.email }}</span></a></li>
-       </ul>
-        <p>If icons are not visible, please disable your adblocker.</p>
-     </div>
-
-     <div class="footer-col footer-col-2">
-     </div>
-
-     <div class="footer-col footer-col-3">
-       <p>{{- site.description | escape -}}</p>
-     </div>
-   </div>
+<footer class="site-footer" aria-label="footer">
+  <div class="grid-wrapper">
+    <div class="footer-left">
+      <div id="footer-social" class="footer-social" social={{site.social_links | jsonify}} root={{site.url}}>
+      </div>
+    </div>
+    <div class="footer-right">
+      <nav id="footer-nav" nav-links={{nav_links}} role="navigation">
+        {%- for page in site.nav_pages -%}
+          {%- assign my_page = site.pages | where: "path", page | first -%}
+          <a href={{my_page.url | absolute_url}}>{{my_page.title}}</a><br>
+        {%- endfor -%}
+      </nav>
+    </div>
+  </div>
+  <div><a href={{site.email}}>> Email Me</a></div>
+  <div class="bottom-right">
+    <p>Site contents © 2021 under <a href={{"/documents/license.txt" | absolute_url}}>MIT</a> license.</p>
   </div>
 </footer>
-  

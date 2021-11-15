@@ -2,44 +2,48 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<main class="page-content" aria-label="Content">
+    <section>
+      <div class="single-column">
+        <h1 class="page-title">{{ page.title | escape }}</h1>
+        {{ content }}
+      </div>
+    </section>
 
-  {{ content }}
-        
-  <div class="row">
-    <div class="col">
-      <img src="assets/RayTracerGUI.png">
+
+  <div class="home">
+    <div class="row">
+      <div class="col">
+        <img src="assets/RayTracerGUI.png">
+      </div>
+      <div class="col">
+        <img src="assets/Ubiquitin.png">
+      </div>
     </div>
-    <div class="col">
-      <img src="assets/Ubiquitin.png">
+    <div class="row">
+      <img src="assets/RavenEngineEditor.png">
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="assets/TerrainRendering.png">
+      </div>
+      <div class="col">
+        <img src="assets/Flushed.png">
+      </div>
+    </div>
+    <div class="row">
+      <img src="assets/CantWaitLvl3.gif">
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="assets/FreeFormDeformation.gif">
+      </div>
+      <div class="col">
+        <img src="assets/InitialRayTracer.png">
+      </div>
+    </div>
+    <div class="row">
+      <img src="assets/Suzanne.png">
     </div>
   </div>
-  <div class="row">
-    <img src="assets/RavenEngineEditor.png">
-  </div>
-  <div class="row">
-    <div class="col">
-      <img src="assets/TerrainRendering.png">
-    </div>
-    <div class="col">
-      <img src="assets/Flushed.png">
-    </div>
-  </div>
-  <div class="row">
-    <img src="assets/CantWaitLvl3.gif">
-  </div>
-  <div class="row">
-    <div class="col">
-      <img src="assets/FreeFormDeformation.gif">
-    </div>
-    <div class="col">
-      <img src="assets/InitialRayTracer.png">
-    </div>
-  </div>
-  <div class="row">
-    <img src="assets/Suzanne.png">
-  </div>
-</div>
+</main>
