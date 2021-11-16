@@ -2,6 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -14,6 +20,10 @@ body {
   font-family: 'Courier New', monospace;
 }
 
+h1 {
+  text-align: center;
+}
+
 a {
   color: #73cff4;
   text-decoration: none;
@@ -24,16 +34,34 @@ a:hover, a:focus {
 }
 
 .grid-wrapper {
-  position: relative;
   display: grid;
   align-items: center;
-  max-width: 100%;
+}
+
+.flex-wrapper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  min-height: 30%;
+}
+
+.flex-wrapper-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
-  position: relative;
   display: inline-block;
-  max-width: 100%;
+  max-width: 100%;;
 }
 
 /* header styling */
@@ -155,4 +183,55 @@ a:hover, a:focus {
 .page-title {
   font-size: 3em;
   font-weight: 1;
+}
+
+.large-portfolio-img {
+  object-fit: cover;
+
+  min-width: 300px;
+  min-height: 200px;
+
+  height: 60vh;
+  width: 40vw;
+
+  margin-bottom: 5vh;
+}
+
+.portfolio-desc-background {
+  background-color: #141e32;
+
+  min-width: 40vw;
+  min-width: 200px;
+  width: 40vw;
+  height: 30vh;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+}
+
+.portfolio-desc-header {
+  position: relative;
+  top: -3vh;
+
+  padding: 2vh 1vw 2vh;
+
+  min-width: 200px;
+  width: 20vw;
+
+  background-color: #3c96be;
+
+  font-size: 2em;
+  color:#0f1928;
+}
+
+.portfolio-desc-header:hover, .portfolio-desc-header:focus {
+  background-color: #73cff4;;
+}
+
+.portfolio-desc {
+  margin: 2vh 2vw;
+}
+
+.portfolio-link {
+  color:#0f1928;
 }

@@ -5,7 +5,10 @@ titlePicture:  "/assets/RavenEngineEditor.png"
 permalink: "/Raven_Engine/"
 repo: "RavenEngine"
 order: 0
+excerpt: blurb
 ---
+
+
 <!-- main content -->
 {% include captioned_image.html src='assets/RavenEngineEditor.png' alt='Raven engine editor' caption='Raven engine editor' %}
 

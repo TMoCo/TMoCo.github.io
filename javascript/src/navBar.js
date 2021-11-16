@@ -24,7 +24,6 @@ function NavBarMenu(props) {
 
 function NavBar (props) {
   const [width, height] = useWindowDimension();
-  console.log(width, height);
   // based on width, change what is rendered
   return width > 1000 ?
     (props.links.map(link =>
@@ -42,7 +41,6 @@ function useWindowDimension() {
 
   React.useEffect(() => {
     const debouncedResize = debounce(() => {
-      console.log("resized");
       setDimension([window.innerWidth, window.innerHeight]);
     }, 100);
     window.addEventListener('resize', debouncedResize);

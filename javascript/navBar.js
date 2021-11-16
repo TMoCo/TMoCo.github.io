@@ -37,9 +37,9 @@ function NavBar(props) {
       _useWindowDimension2 = _slicedToArray(_useWindowDimension, 2),
       width = _useWindowDimension2[0],
       height = _useWindowDimension2[1];
-
-  console.log(width, height);
   // based on width, change what is rendered
+
+
   return width > 1000 ? props.links.map(function (link) {
     return React.createElement(NavBarLink, { key: link.label, link: link });
   }) : React.createElement(NavBarMenu, { key: "nav-menu", link: { "url": '/', "label": 'menu' } });
@@ -54,7 +54,6 @@ function useWindowDimension() {
 
   React.useEffect(function () {
     var debouncedResize = debounce(function () {
-      console.log("resized");
       setDimension([window.innerWidth, window.innerHeight]);
     }, 100);
     window.addEventListener('resize', debouncedResize);

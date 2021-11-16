@@ -6,13 +6,29 @@ layout: default
     <h1 class="page-title">{{ page.title | escape }}</h1>
     {{ content }}
   </div>
+  {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
+
+  <div class="flex-wrapper">
+    <img class="large-portfolio-img" src= "{{ entries[0].titlePicture }}">
+    <div class="portfolio-desc-background">
+      <div class="portfolio-desc-header">
+        <a class="portfolio-link" href="{{ entries[0].url | relative_url }}">
+          {{ entries[0].title | escape }}
+        </a>
+      </div>
+      <div class="portfolio-desc">
+        <p>
+          {{ entries[0].excerpt }}
+        </p>
+      </div>
+    </div>
+  </div>
+
   <ul class="post-list">
-    {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
     {%- for entry in entries -%}
     <li>
       <div class="container">
         <a class="post-link" href="{{ entry.url | relative_url }}">
-          <img src= "{{ entry.titlePicture }}">
           <div class="bottomleft">{{ entry.title | escape }}</div>
         </a>
       </div>
