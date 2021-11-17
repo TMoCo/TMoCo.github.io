@@ -118,11 +118,13 @@ a:hover, a:focus {
 }
 
 .site-nav-button:checked ~ .site-nav-menu-label::before {
+  text-align: center;
   content: "close";
   position: fixed;
 }
 
 .site-nav-button:not(:checked) ~ .site-nav-menu-label::before {
+  text-align: center;
   content: "menu";
   position: relative;
 }
@@ -132,6 +134,8 @@ a:hover, a:focus {
   position: fixed;
   left: 0;
   top: 0;
+
+  z-index: 2;
 
   padding-top: 5%;
 
