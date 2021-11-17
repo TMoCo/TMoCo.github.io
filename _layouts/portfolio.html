@@ -152,10 +152,10 @@ layout: default
   </div>
 
   <div class="single-column">
-    <p>For my master's course, I wrote many applications implementing techniques and concepts found in the games industry!</p>
+    <p>For my master's course, I wrote many C++ applications implementing techniques and concepts found in the games industry! Click for more info.</p>
   </div>
 
-  <div class="flex-wrapper">
+  <div class="flex-wrapper-end">
     {%- for i in (7..9)-%}
       <a class="portfolio-img-button" href="{{ entries[i].url | relative_url }}">
         <img class="large-portfolio-img" src= "{{ entries[i].titlePicture }}">
@@ -165,6 +165,12 @@ layout: default
       </a>
     {%- endfor -%}
   </div>
+</section>
 
-
+<section role="contentinfo" aria-label="website work">
+  <div class="banner-no-background">
+   <span class="dot"></span>
+   <span class="dot"></span>
+   <span class="dot"></span>
+  </div>
 </section>

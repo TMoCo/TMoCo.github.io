@@ -41,8 +41,18 @@ a:hover, a:focus {
 .flex-wrapper {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 5vh
+}
+
+.flex-wrapper-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
 
   margin-bottom: 5vh
 }
@@ -179,7 +189,7 @@ a:hover, a:focus {
 .dot {
   height: 25px;
   width: 25px;
-  background-color: #3c96be;
+  background-color: #73cff4;
   border-radius: 50%;
   display: inline-block;
 }
@@ -236,12 +246,12 @@ a:hover, a:focus {
 }
 
 .portfolio-desc-header {
+  padding: 2vh 1vw 2vh;
+  width: 25vw;
+  min-width: 250px;
+
   position: relative;
   top: -3vh;
-
-  padding: 2vh 1vw 2vh;
-
-  width: 25vw;
 
   background-color: #3c96be;
 
@@ -295,4 +305,19 @@ a:hover, a:focus {
   opacity: 1;
   display: flex;
   transform: translate(0, -14vh);
+}
+
+.home-img {
+  margin: 10px 10px 10px 10px;
+  max-width: 40%;
+  transition: transform 0.1s;
+}
+
+.home-img:hover {
+  margin: 10px 10px 10px 10px;
+  transform: scale(125%);
+}
+
+.profile-picture {
+  
 }

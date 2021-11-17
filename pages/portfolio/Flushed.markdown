@@ -5,6 +5,7 @@ titlePicture: "/assets/Flushed.png"
 permalink: "/Flushed/"
 repo: "Flushed"
 order: 3
+excerpt: Play as a rubber ducky that has been flushed down the toilet, collect jewellery and avoid obstacles for a high score.
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/FlushedMenu.png' alt='Flushed main menu' caption='Flushed! main menu' %}
@@ -21,4 +22,3 @@ I really enjoyed making this small game and it proved to be valuable preparation
 
 [proteinVisualiserLink]: {{site.url}}/Unity_Protein_Visualiser/
 [CantWait]: {{site.url}}/Cant_Wait/
-

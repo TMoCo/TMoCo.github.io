@@ -5,6 +5,7 @@ titlePicture:  "/assets/Ubiquitin.png"
 permalink: "/Unity_Protein_Visualiser/"
 repo: "ProteinVisualiser"
 order: 1
+excerpt: Exploring the application of game technologies in research, I built a protein visualiser in Unity.
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/Ubiquitin.png' alt='Ubiquitin' caption='Ubiquitin protein' %}

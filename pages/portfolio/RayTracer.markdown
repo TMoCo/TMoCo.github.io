@@ -5,6 +5,7 @@ titlePicture: "/assets/InitialRayTracer.png"
 permalink: "/RayTracer/"
 repo: "Simple-RayTracer"
 order: 6
+excerpt: A C++ application for loading a scene, viewing it in OpenGL and saving a ray traced render to an image.
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/RayTracerGUI.png' alt='raytracer gui' caption='Gray cornell box render (100 samples per pixel)' %}
@@ -29,4 +30,3 @@ This is still work in progress and as you may see from the first image, there ar
 - Bounding Volume Hierarchies (BVH) and experiment with different Sufrace Area Heuristics (SAH).
 
 This is going to be a fun project!
-

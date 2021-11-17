@@ -5,7 +5,7 @@ titlePicture:  "/assets/RavenEngineEditor.png"
 permalink: "/Raven_Engine/"
 repo: "RavenEngine"
 order: 0
-excerpt: blurb
+excerpt: I lead a 5-person team to build a C++ game engine from scratch.
 ---
 
 

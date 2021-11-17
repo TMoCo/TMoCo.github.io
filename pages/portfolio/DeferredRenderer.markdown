@@ -1,10 +1,11 @@
 ---
 layout: portfolio_entry
-title:  "Vulkan Deferred Renderer"
+title:  "Deferred Rendering"
 titlePicture:  "/assets/Suzanne.png"
 permalink: "/Vulkan_Deferred_Renderer/"
 repo: "VulkanRenderer"
 order: 4
+excerpt: A C++ deferred renderer for viewing gltf models with physically based shading and shadow mapping, written with Vulkan API.
 ---
 <!-- main content -->
 The Vulkan deferred renderer was originally a piece of coursework made for my master's high performance graphics module.

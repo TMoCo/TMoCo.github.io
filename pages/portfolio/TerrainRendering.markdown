@@ -1,10 +1,11 @@
 ---
 layout: portfolio_entry
-title:  "Vulkan Terrain Rendering"
+title:  "Terrain Rendering"
 titlePicture:  "/assets/TerrainRendering.png"
 permalink: "/Vulkan_Terrain_Rendering/"
 repo: "HPGA2TerrainRendering"
 order: 5
+excerpt: An application for rendering terrain from height maps with optimizations such as view based culling, written in C++ with the Vulkan API.
 ---
 <!-- code highlights -->
 {%- assign vertex_shader = "int id = gl_VertexIndex;

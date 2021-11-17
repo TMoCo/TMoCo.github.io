@@ -5,6 +5,7 @@ titlePicture: "/assets/CantWait.png"
 permalink: "/Cant_Wait/"
 repo: "Cantwait"
 order: 2
+excerpt: Navigate an unsteady waiter through levels and avoid knocking items over in this physics-based game!
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/CantWaitMainMenu.png' alt='Can\'t Wait main menu' caption='Can\'t Wait main menu' %}
