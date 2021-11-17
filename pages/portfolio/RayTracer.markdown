@@ -25,7 +25,7 @@ I also wrote my own WaveFrontOBJ file parser, using the .obj files exported by B
 </div>
 
 Once I could raytrace objects, I migrated from a Linux to Windows development environment to use Visual Studio and modern OpenGL features (the coursework used OpenGL 1.1).
-To manage third party libraries, I learnt to use CMake to manage my project and wrote a script to generate a Visual Studio solutions.
+To manage third party libraries, I learnt to use CMake to manage my project and wrote a script to generate Visual Studio solutions.
 
 Taking inspiration from the fantastic [Physically Based Rendering: From Theory To Implementation][pbr], I've created a custom scene format for loading geometric primitives which can be viewed rendered in OpenGL and raytraced to an image file.
 

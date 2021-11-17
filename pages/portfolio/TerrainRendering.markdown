@@ -27,4 +27,4 @@ A typical optimisation for terrain rendering is to apply binning to the terrain,
 
 {% include captioned_image.html src='assets/BinnedTerrain.gif' alt='Terrain binning' caption='Terrain bins culled based on view direction' %}
 
-There are many other ways to optimise terrain rendering such as by using different terrain data structures like as kd-trees or dynamic tesselation on the GPU for LODs. I hope to revisit this project and explore more terrain rendering techniques with my improved C++ and Vulkan knowledge.
+There are many other ways to optimise terrain rendering such as by using different terrain data structures like kd-trees or dynamic tesselation on the GPU for LODs. I hope to revisit this project and explore more terrain rendering techniques with my improved C++ and Vulkan knowledge.
