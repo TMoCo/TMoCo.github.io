@@ -4,7 +4,7 @@ title:  "Unity Protein Visualiser"
 titlePicture:  "/assets/Ubiquitin.png"
 permalink: "/Unity_Protein_Visualiser/"
 repo: "ProteinVisualiser"
-order: 2
+order: 1
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/Ubiquitin.png' alt='Ubiquitin' caption='Ubiquitin protein' %}

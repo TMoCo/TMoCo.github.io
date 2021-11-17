@@ -4,7 +4,7 @@ title: "Can't Wait"
 titlePicture: "/assets/CantWait.png"
 permalink: "/Cant_Wait/"
 repo: "Cantwait"
-order: 1
+order: 2
 ---
 <!-- main content -->
 {% include captioned_image.html src='assets/CantWaitMainMenu.png' alt='Can\'t Wait main menu' caption='Can\'t Wait main menu' %}
@@ -17,7 +17,7 @@ order: 1
 Made entirely from scratch over three days for the 49th Ludum Dare game jam with my friend Jonathan, this game was a lot of fun to make and is even more fun to play. Using the arrow keys, you must navigate through levels in as short a time as possible and by making as little damage as possible. The only catch is the waiter you control is a little unstable and will easily fall over if you lean too much in a certain direction!
 
 {% include captioned_image.html src='assets/CantWaitLvl2.gif' alt='Can\'t Wait level 2 gif' caption='Can\'t Wait level 2' %}
-  
+
 {% include captioned_image.html src='assets/CantWaitLvl3.gif' alt='Can\'t Wait level 3 gif' caption='Can\'t Wait level 3' %}\
 Other game ideas we had for the 'Unstable' theme were:
 - A potion making game. Similar to Cooking Mama, the aim is to brew potions by interacting with a GUI and following a set of instructions. How well you brew the potion determins if the potion is stable or not.

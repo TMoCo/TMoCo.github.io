@@ -1,39 +1,170 @@
 ---
 layout: default
 ---
-<section>
-  <div class="single-column">
-    <h1 class="page-title">{{ page.title | escape }}</h1>
-    {{ content }}
-  </div>
-  {%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
+<div class="single-column">
+  <h1 class="page-title">{{ page.title | escape }}</h1>
+  <p>
+  {{ content }}
+  </p>
+</div>
+{%- assign entries = site.pages | sort: "order" | where: "layout", "portfolio_entry"-%}
 
+<section role="contentinfo" aria-label="major projects">
   <div class="flex-wrapper">
-    <img class="large-portfolio-img" src= "{{ entries[0].titlePicture }}">
+    <a href="{{ entries[0].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[0].titlePicture }}">
+    </a>
     <div class="portfolio-desc-background">
-      <div class="portfolio-desc-header">
-        <a class="portfolio-link" href="{{ entries[0].url | relative_url }}">
+      <a class="portfolio-link" href="{{ entries[0].url | relative_url }}">
+          <div class="portfolio-desc-header">
           {{ entries[0].title | escape }}
-        </a>
-      </div>
+        </div>
+      </a>
       <div class="portfolio-desc">
-        <p>
-          {{ entries[0].excerpt }}
-        </p>
+        {{ entries[0].excerpt }}
       </div>
     </div>
   </div>
 
-  <ul class="post-list">
-    {%- for entry in entries -%}
-    <li>
-      <div class="container">
-        <a class="post-link" href="{{ entry.url | relative_url }}">
-          <div class="bottomleft">{{ entry.title | escape }}</div>
-        </a>
+  <div class="flex-wrapper">
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[1].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[1].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[1].excerpt }}
       </div>
-      <span class="post-meta">{{ post.excerpt }}</span>
-    </li>
+    </div>
+    <a href="{{ entries[1].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[1].titlePicture }}">
+    </a>
+  </div>
+</section>
+
+<section role="contentinfo" aria-label="games">
+  <div class="banner" role="banner">
+    <h2 class="section-title">
+      I also make games!
+    </h2>
+  </div>
+
+  <div class="flex-wrapper">
+    <a href="{{ entries[2].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[2].titlePicture }}">
+    </a>
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[2].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[2].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[2].excerpt }}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-wrapper">
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[3].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[3].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[3].excerpt }}
+      </div>
+    </div>
+    <a href="{{ entries[3].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[3].titlePicture }}">
+    </a>
+  </div>
+</section>
+
+<section role="contentinfo" aria-label="tech demos">
+  <div class="banner-no-background">
+   <span class="dot"></span>
+   <span class="dot"></span>
+   <span class="dot"></span>
+  </div>
+
+  <div class="single-column">
+    <p>By writing tech demos, I hone my C++ programming skills whilst learning about new features and techniques.</p>
+  </div>
+
+  <div class="flex-wrapper">
+    <a href="{{ entries[4].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[4].titlePicture }}">
+    </a>
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[4].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[4].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[4].excerpt }}
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-wrapper">
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[5].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[5].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[5].excerpt }}
+      </div>
+    </div>
+    <a href="{{ entries[5].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[5].titlePicture }}">
+    </a>
+  </div>
+
+  <div class="flex-wrapper">
+    <a href="{{ entries[6].url | relative_url }}">
+      <img class="large-portfolio-img" src= "{{ entries[6].titlePicture }}">
+    </a>
+    <div class="portfolio-desc-background">
+      <a class="portfolio-link" href="{{ entries[6].url | relative_url }}">
+        <div class="portfolio-desc-header">
+          {{ entries[6].title | escape }}
+        </div>
+      </a>
+      <div class="portfolio-desc">
+        {{ entries[6].excerpt }}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section role="contentinfo" aria-label="coursework">
+  <div class="banner-no-background">
+   <span class="dot"></span>
+   <span class="dot"></span>
+   <span class="dot"></span>
+  </div>
+
+  <div class="single-column">
+    <p>For my master's course, I wrote many applications implementing techniques and concepts found in the games industry!</p>
+  </div>
+
+  <div class="flex-wrapper">
+    {%- for i in (7..9)-%}
+      <a class="portfolio-img-button" href="{{ entries[i].url | relative_url }}">
+        <img class="large-portfolio-img" src= "{{ entries[i].titlePicture }}">
+        <div class="portfolio-img-button-label">
+          {{ entries[i].title | escape }}
+        </div>
+      </a>
     {%- endfor -%}
-  </ul>
+  </div>
+
+
 </section>
