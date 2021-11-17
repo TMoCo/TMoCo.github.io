@@ -117,18 +117,6 @@ a:hover, a:focus {
   display: inline-block;
 }
 
-.site-nav-button:checked ~ .site-nav-menu-label::before {
-  text-align: center;
-  content: "close";
-  position: fixed;
-}
-
-.site-nav-button:not(:checked) ~ .site-nav-menu-label::before {
-  text-align: center;
-  content: "menu";
-  position: relative;
-}
-
 .site-nav-menu {
   display: none;
   position: fixed;
@@ -250,8 +238,9 @@ a:hover, a:focus {
   object-fit: cover;
 
   min-width: 350px;
-  min-height: 40vh;
-  max-height: 60vh;
+  min-height: 300px;
+
+  height: 60vh;
   width: 40vw;
 
 }

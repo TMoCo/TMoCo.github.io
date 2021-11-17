@@ -14,8 +14,8 @@ function NavBarMenu(props) {
   return (
     <div>
       <label className="site-nav-button">
+      menu
       <input className="site-nav-button" type="checkbox"/>
-      <div className="site-nav-menu-label"></div>
       <div className="site-nav-menu">
       {props.links.map(link =>
         <NavBarLink key={link.label} link={link}/>)

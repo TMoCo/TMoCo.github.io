@@ -23,8 +23,8 @@ function NavBarMenu(props) {
     React.createElement(
       "label",
       { className: "site-nav-button" },
+      "menu",
       React.createElement("input", { className: "site-nav-button", type: "checkbox" }),
-      React.createElement("div", { className: "site-nav-menu-label" }),
       React.createElement(
         "div",
         { className: "site-nav-menu" },
