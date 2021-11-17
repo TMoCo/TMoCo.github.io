@@ -223,10 +223,10 @@ a:hover, a:focus {
   object-fit: cover;
 
   min-width: 350px;
-  min-height: 300px;
-
-  height: 60vh;
+  min-height: 40vh;
+  max-height: 60vh;
   width: 40vw;
+
 }
 
 .portfolio-desc-background {
@@ -319,5 +319,5 @@ a:hover, a:focus {
 }
 
 .profile-picture {
-  
+
 }

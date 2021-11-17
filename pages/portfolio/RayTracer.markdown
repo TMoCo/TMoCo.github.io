@@ -16,14 +16,12 @@ I wrote my own WaveFrontOBJ file parser, using the .obj files exported by Blende
 \
 I built my RayTracer class to be more flexible than my coursework submission to quickly switch between different methods for ray-triangle intersections, hemisphere sampling and triangle sampling.
 
-<div style="display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(4, 1fr);">
-<img src="{{site.url}}/assets/correctUVs.png" style="grid-column: 1 / span 2; grid-row: 1 / span 2;">
-<img src="{{site.url}}/assets/directions.png" style="grid-column: 3 / span 2; grid-row: 1 / span 2;">
-<img src="{{site.url}}/assets/normals.png" style="grid-column: 2 / span 2; grid-row: 3 / span 2;">
-</div>
-<p style="text-align:center;">
+<div class="flex-wrapper">
+<img src="{{site.url}}/assets/correctUVs.png" style="width: 50%;">
+<img src="{{site.url}}/assets/directions.png" style="width: 50%;">
+<img src="{{site.url}}/assets/normals.png" style="width: 50%;">
 <em>Clockwise: correct UVs, random directions, normals</em>
-</p>
+</div>
 This is still work in progress and as you may see from the first image, there are some issues still to be resolved (notice the white spot in the top left corner of the image). However, I intend to fix these and add more features namely:
 - a better material system for volumetric rendering
 - multithreading, by creating a thread safe stack of image pixel jobs that threads will pop once it's colour has been computed
