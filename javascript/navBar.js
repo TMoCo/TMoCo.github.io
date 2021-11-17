@@ -2,11 +2,11 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
 
 function NavBarLink(props) {
   return React.createElement(
-    "div",
-    { className: "nav-link site-nav-button" },
+    "a",
+    { href: props.link.url },
     React.createElement(
-      "a",
-      { href: props.link.url },
+      "div",
+      { className: "nav-link site-nav-button" },
       React.createElement(
         "span",
         null,
@@ -19,14 +19,20 @@ function NavBarLink(props) {
 function NavBarMenu(props) {
   return React.createElement(
     "div",
-    { className: "site-nav-menu site-nav-button" },
+    null,
     React.createElement(
-      "a",
-      { href: props.link.url },
+      "label",
+      { className: "site-nav-button" },
+      React.createElement("input", { className: "site-nav-button", type: "checkbox" }),
+      React.createElement("div", { className: "site-nav-menu-label" }),
       React.createElement(
-        "span",
-        null,
-        props.link.label
+        "div",
+        { className: "site-nav-menu" },
+        props.links.map(function (link) {
+          return React.createElement(NavBarLink, { key: link.label, link: link });
+        }),
+        React.createElement("br", null),
+        "tap / click anywhere to close the menu"
       )
     )
   );
@@ -42,7 +48,7 @@ function NavBar(props) {
 
   return width > 1000 ? props.links.map(function (link) {
     return React.createElement(NavBarLink, { key: link.label, link: link });
-  }) : React.createElement(NavBarMenu, { key: "nav-menu", link: { "url": '/', "label": 'menu' } });
+  }) : React.createElement(NavBarMenu, { links: props.links });
 }
 
 // hook for getting window dimensions

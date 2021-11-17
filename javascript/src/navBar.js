@@ -1,23 +1,29 @@
 function NavBarLink(props) {
   return (
-    <div className="nav-link site-nav-button">
-        <a href={props.link.url}>
-            <span>
-              {props.link.label}
-            </span>
-        </a>
-    </div>
+    <a href={props.link.url}>
+      <div className="nav-link site-nav-button">
+        <span>
+          {props.link.label}
+        </span>
+      </div>
+    </a>
   );
 }
 
 function NavBarMenu(props) {
   return (
-    <div className="site-nav-menu site-nav-button">
-      <a href={props.link.url}>
-          <span>
-            {props.link.label}
-          </span>
-      </a>
+    <div>
+      <label className="site-nav-button">
+      <input className="site-nav-button" type="checkbox"/>
+      <div className="site-nav-menu-label"></div>
+      <div className="site-nav-menu">
+      {props.links.map(link =>
+        <NavBarLink key={link.label} link={link}/>)
+      }
+      <br/>
+      tap / click anywhere to close the menu
+      </div>
+      </label>
     </div>
   );
 }
@@ -29,7 +35,7 @@ function NavBar (props) {
     (props.links.map(link =>
       <NavBarLink key={link.label} link={link}/>)
     ):
-    <NavBarMenu key="nav-menu" link={{"url":'/', "label":'menu'}}/>;
+    <NavBarMenu links={props.links}/>;
 }
 
 // hook for getting window dimensions
