@@ -9,7 +9,7 @@ I grew up in the south of France near Marseille, completing an [OIB Baccalaureat
 
 As my studies progressed, my interest in Computer Science grew; I ended up achieving better marks in my last two years than in my first two. I discovered my love for computer graphics and game technologies, realising that through them I could combine software engineering with the subjects I enjoyed so much before university.
 
-Having happily graduated and after a short break working on personal projects, I am now actively looking for an graduate programming role in the video games industry, preferably in computer graphics and rendering where my greatest interest lies and I can apply my specialised skillset.\\
+Having happily graduated and after a short break working on personal projects, I am now actively looking for a graduate programming role in the video games industry, preferably in computer graphics and rendering where my greatest interest lies and I can apply my specialised skillset.\\
 In my free time, I create games and develop applications experimenting with new graphics techniques. I'm always thinking about ways to improve my previous work, reading about techniques I didn't have the time to study in detail at university, tinkering with my setup, and learning new things about my favorite programming languages as well as new ones.
 
 
