@@ -13,6 +13,13 @@ div.youtube_comment {
   margin-bottom: 15px;
 }
 
+div.cvlink {
+  background-color: #242424;
+  padding: 10px;
+  border-radius: 2px;
+  color: white;
+}
+
 div.captioned_image_wrapper {
   max-width: 95%;
   margin: auto;
