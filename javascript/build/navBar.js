@@ -58,6 +58,8 @@ function useWindowDimension() {
       dimension = _React$useState2[0],
       setDimension = _React$useState2[1];
 
+  console.log("custom hook");
+
   React.useEffect(function () {
     var debouncedResize = debounce(function () {
       setDimension([window.innerWidth, window.innerHeight]);

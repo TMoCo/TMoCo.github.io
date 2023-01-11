@@ -20,7 +20,7 @@ body {
   height:100vh;
 
   background-color: #090f17;
-  color: #3c96be;
+  color: #73cff4;
   font-family: 'Courier New', monospace;
   font-size: 1.5em;
 }
@@ -30,7 +30,7 @@ h1 {
 }
 
 a {
-  color: #73cff4;
+  color: #ffb84d;
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ a:hover, a:focus {
 
 .site-header {
   padding: 2% 2.5% 1.5%;
-  background-color: #141e32;
+  background-color: #1d2c49;
 }
 
 .site-title {
@@ -138,11 +138,16 @@ a:hover, a:focus {
 
   background-color: #141e32;
   transition: transform .1s;
+  border-radius: 2px;
 }
 
-.nav-link {}
+.nav-link {
+  border-radius: 2px;
+}
+
 .nav-link:hover, .nav-link:focus{
   transform: scale(1.1);
+  background-color: #25375b;
 }
 
 /* footer styling */
@@ -175,13 +180,12 @@ a:hover, a:focus {
 }
 
 .svg-icon {
-  fill: #3c96be;
+  fill: #ffb84d;;
   width: 50px;
   height: 50px;
 }
 
 /* content styling */
-
 .banner {
   display: flex;
   justify-content: center;
@@ -257,7 +261,7 @@ a:hover, a:focus {
   align-items: flex-end;
   justify-content: flex-start;
 
-  background-color: #141e32;
+  background-color: #1d2c49;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 2px;
 }
@@ -273,7 +277,7 @@ a:hover, a:focus {
   background-color: #3c96be;
 
   font-size: 1.5em;
-  color:#0f1928;
+  color: #0f1928;
 }
 
 .portfolio-desc-header:hover, .portfolio-desc-header:focus {
@@ -290,6 +294,7 @@ a:hover, a:focus {
 }
 
 .portfolio-img-button {
+  color: #0f1928;
   display: flex;
   flex-direction: column-reverse;
   margin: 1vh 0.5vw;
@@ -318,6 +323,7 @@ a:hover, a:focus {
   display: flex;
   transform: translate(0, -14vh);
 }
+
 .portfolio-img-button:focus .portfolio-img-button-label {
   opacity: 1;
   display: flex;
